@@ -216,55 +216,127 @@ const fs = require('fs');
          {
             var field = "";
             var iconClass = "";
-          if(employees[i].getRole()==="Manager")
-                {    field = `Office #: ${employees[i].getOfficeNumber()}`;
-                    iconClass = `users`;
-                }
-          if(employees[i].getRole()==="Engineer")
-                  {  field = `Github: ${employees[i].getGithub()}`;
-                    iconClass = `laptop-code`;
-                  }
-          if(employees[i].getRole()==="Intern")
-                  {  field = `School: ${this.employees[i].getSchool()}`;
-                    iconClass = `graduation-cap`;
-                    }
 
-            var employeeScript= `
-            <script>
-            var col = $('<div class="col-4">')
-            var card = $('<div class="card mx-auto border-info mb-3" style="max-width: 18rem;">');
-            var header1 = $('<div class="card-header bg-primary text-white h4">');
-            header1.text("${employees[i].getName()}");
-            var header2 = $('<div class="card-header text-white  bg-primary">');
-            var icon = $('<i class="fas fa-${iconClass}">');
-            header2.text(" ${employees[i].getRole()}");
-            header2.prepend(icon);
-            var cardBody = $('<div class="card-body text-info">');
-            var cardTitle = $('<h5 class="card-title">');
-            var cardText = $('<p class="list-group-item">');
-            cardText.text("ID: ${employees[i].getId()}");
-            var cardText2 = $('<p class="list-group-item">');
-            cardText2.text("Email: ${employees[i].getEmail()}");
-            var cardText3 = $('<p class="list-group-item">');
-            cardText3.text("${field}");
-            cardBody.append(cardTitle);
-            cardBody.append(cardText);
-            cardBody.append(cardText2);
-            cardBody.append(cardText3);
-    
-            card.append(header1);
-            card.append(header2);
-            card.append(cardBody);
-            col.append(card);
-            $("#cards").append(col);    
-            </script>        
-            `;
-           
-          scripts=scripts + employeeScript  
-        }
+            if(employees[i].getRole()==="Engineer")
+
+            {  field = `${employees[i].getGithub()}`;
+              iconClass = `glasses`;
+              let employeeScript= `
+                    <script>
+                    var col = $('<div class="col-4">')
+                    var card = $('<div class="card mx-auto border-info mb-3" style="max-width: 18rem;">');
+                    var header1 = $('<div class="card-header bg-primary text-white h4">');
+                    header1.text("${employees[i].getName()}");
+                    var header2 = $('<a class="card-header text-white  bg-primary">');
+                    var icon = $('<i class="fas fa-${iconClass}">');
+                    header2.text(" ${employees[i].getRole()}");
+                    header2.prepend(icon);
+                    var cardBody = $('<div class="card-body text-info">');
+                    var cardTitle = $('<h5 class="card-title">');
+                    var cardText = $('<p class="list-group-item">');
+                    cardText.text("ID: ${employees[i].getId()}");
+                    var cardText2 = $('<div class="list-group-item">Email : <a href="mailto:${employees[i].getEmail()}">${employees[i].getEmail()}</a></div>');
+                    var cardText3 = $('<div class="list-group-item"><a href="https://github.com/${field}" target="_blank">${field}</a></div>');
+                    
+                    
+                    cardBody.append(cardTitle);
+                    cardBody.append(cardText);
+                    cardBody.append(cardText2);
+                    cardBody.append(cardText3);
+            
+                    card.append(header1);
+                    card.append(header2);
+                    card.append(cardBody);
+                    col.append(card);
+                    $("#cards").append(col);    
+                    </script>        
+                    `;
+      
+                scripts=scripts + employeeScript  ;
+             }
+
+                if(employees[i].getRole()==="Manager")
+                        {   
+                             field = `Office #: ${employees[i].getOfficeNumber()}`;
+                            iconClass = `mug-hot`;
+                         var employeeScript= `
+                            <script>
+                            var col = $('<div class="col-4">')
+                            var card = $('<div class="card mx-auto border-info mb-3" style="max-width: 18rem;">');
+                            var header1 = $('<div class="card-header bg-primary text-white h4">');
+                            header1.text("${employees[i].getName()}");
+                            var header2 = $('<a class="card-header text-white  bg-primary">');
+                            var icon = $('<i class="fas fa-${iconClass}">');
+                            header2.text(" ${employees[i].getRole()}");
+                            header2.prepend(icon);
+                            var cardBody = $('<div class="card-body text-info">');
+                            var cardTitle = $('<h5 class="card-title">');
+                            var cardText = $('<p class="list-group-item">');
+                            cardText.text("ID: ${employees[i].getId()}");
+                            var cardText2 = $('<div class="list-group-item">Email : <a href="mailto:${employees[i].getEmail()}">${employees[i].getEmail()}</a></div>');
+                            var cardText3 = $('<div class="list-group-item">');
+                            cardText3.text("${field}");
+                                        
+
+                            cardBody.append(cardTitle);
+                            cardBody.append(cardText);
+                            cardBody.append(cardText2);
+                            cardBody.append(cardText3);
+                    
+                            card.append(header1);
+                            card.append(header2);
+                            card.append(cardBody);
+                            col.append(card);
+                            $("#cards").append(col);    
+                            </script>        
+                            `;
+                        
+                        scripts=scripts + employeeScript  
+                        }
+                
+                if(employees[i].getRole()==="Intern")
+                        {  field = `School: ${employees[i].getSchool()}`;
+                            iconClass = `graduation-cap`;
+                        
+                    var employeeScript= `
+                    <script>
+                    var col = $('<div class="col-4">')
+                    var card = $('<div class="card mx-auto border-info mb-3" style="max-width: 18rem;">');
+                    var header1 = $('<div class="card-header bg-primary text-white h4">');
+                    header1.text("${employees[i].getName()}");
+                    var header2 = $('<a class="card-header text-white  bg-primary">');
+                    var icon = $('<i class="fas fa-${iconClass}">');
+                    header2.text(" ${employees[i].getRole()}");
+                    header2.prepend(icon);
+                    var cardBody = $('<div class="card-body text-info">');
+                    var cardTitle = $('<h5 class="card-title">');
+                    var cardText = $('<p class="list-group-item">');
+                    cardText.text("ID: ${employees[i].getId()}");
+                    var cardText2 = $('<div class="list-group-item">Email : <a href="mailto:${employees[i].getEmail()}">${employees[i].getEmail()}</a></div>');
+                    var cardText3 = $('<div class="list-group-item">');
+                    cardText3.text("${field}");
+                                
+
+                    cardBody.append(cardTitle);
+                    cardBody.append(cardText);
+                    cardBody.append(cardText2);
+                    cardBody.append(cardText3);
+            
+                    card.append(header1);
+                    card.append(header2);
+                    card.append(cardBody);
+                    col.append(card);
+                    $("#cards").append(col);    
+                    </script>        
+                    `;
+                
+                scripts=scripts + employeeScript  
+                        
+                }
+            } 
         return scripts;
-        
     }
+    
   
 
   const init = () => {
