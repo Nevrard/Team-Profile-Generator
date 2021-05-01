@@ -7,7 +7,7 @@ const inquirer = require("inquirer");
 const fs = require('fs');
 
  
-       
+       //Manager prompted questions
         const employees = [];
 
          const managerPrompt =
@@ -70,6 +70,8 @@ const fs = require('fs');
            },
 
     ]
+
+    //Prompted questions to get Engineer and Intern informations
         const employeePrompt = [
             {
                 type: "list",
@@ -151,7 +153,7 @@ const fs = require('fs');
             }
         ]
     
-
+  //Create a Manager 
     function createManager ()
      {
         inquirer.prompt(managerPrompt).then(data =>
@@ -163,7 +165,8 @@ const fs = require('fs');
               
     }
 
-    
+    //Creates Engineer  and Intern 
+
     function createEmployee()
      {
         inquirer.prompt(employeePrompt).then(data => {
@@ -192,7 +195,7 @@ const fs = require('fs');
            
         });
     }
-
+  // Created the the html files using the predifined template
     function renderHTML()
      {
         
@@ -207,6 +210,8 @@ const fs = require('fs');
 
     }
 
+
+    //render the script that generatess the card cinatining the Employee info 
 
     function renderScript() 
     {
@@ -338,7 +343,7 @@ const fs = require('fs');
     }
     
   
-
+// Initialisation of the application
   const init = () => {
      
     createManager()

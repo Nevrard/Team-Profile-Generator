@@ -1,5 +1,10 @@
 const Intern = require("../lib/intern");
 
+it("Can set school via constructor", () => {
+  const test = "carleton";
+  const e = new Intern("Agnes", 1, "agnes@test.com", test);
+  expect(e.school).toBe(test);
+});
 
 it("getRole() should return Intern", () => {
   const test = "Intern";
