@@ -73,4 +73,4 @@ Here is the Video Demo of the execution of the application:
 
  Youtube :[Video Demo](https://youtu.be/K73ewNIAFtE)
 
- GitHub: https://github.com/Nevrard/Team-Profile-Generator/blob/854edf2c09e7c3eed0d6baadc21c108e5ce9ae31/result/Team%20Profile%20generator.webm
+ GitHub: [Video Demo](https://github.com/Nevrard/Team-Profile-Generator/blob/854edf2c09e7c3eed0d6baadc21c108e5ce9ae31/result/Team%20Profile%20generator.webm)
