@@ -5,6 +5,8 @@
 
 *[Specifications](#specifications)
 
+*[Tests](#tests)
+
 *[Screenshots](#screenshots)
 
 *[Deployment](#deployment)
@@ -27,24 +29,30 @@ After providing the information of all the team member informations, User has an
 ## Specifications
 
 The application is Built using following tools:
-Node.js
-Javascript
-inquirer
-fs
-Jtest
-OOP concept
+-   Node.js
+-   Javascript
+-   inquirer
+-   fs
+-   Jtest
+-   OOP concept
 
 I  have Used classes to defines differents Objects that are used in the appliactions.
 
 I have organized my folders as below:
-Folder "lib" that contains all the js files
-Folder "result" That contains the generated html file
-Folder "test" thet contains the differents test js files 
-Root  Folder that contains configurations files and  the index.js where the application starts when executed 
+-   Folder "lib" that contains all the js files
+-   Folder "result" That contains the generated html file
+-   Folder "test" thet contains the differents test js    files 
+-   Root  Folder that contains configurations files and  the index.js where the application starts when executed 
 
 To run the apllication ,type "node index.js" in your terminal
 then respond to the series of questions prompted
 
+
+## Tests
+ 
+ I have performed Units Tets on all the classes that are used in the applicatons.
+ The Tests defined were all successful.
+ Here is the command to run the Test : 'npm run test'
 
 ## Screenshots
 
@@ -57,9 +65,11 @@ then respond to the series of questions prompted
 ![image](https://user-images.githubusercontent.com/77184762/116793130-cf9c3480-aa92-11eb-96ac-8524e54ec878.png)
 
 
-
-Link to the html file generated: https://github.com/Nevrard/Professional-ReadMe-Generator/blob/main/result/README.md
+Link to the html file generated: https://github.com/Nevrard/Team-Profile-Generator/blob/854edf2c09e7c3eed0d6baadc21c108e5ce9ae31/result/index.html
 
 ## Deployment
 
-Here is the Video Demo of the execution of the application
+Here is the Video Demo of the execution of the application:
+ Youtube :[Video Demo](https://youtu.be/K73ewNIAFtE)
+
+ GitHub: https://github.com/Nevrard/Team-Profile-Generator/blob/854edf2c09e7c3eed0d6baadc21c108e5ce9ae31/result/Team%20Profile%20generator.webm
