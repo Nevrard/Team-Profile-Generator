@@ -17,8 +17,8 @@
 I have built this application that genartes automatically the Team profile based on the inputs from the User on a terminal.
 Team members are categorized in 3 types:
  - Manager
- -Engineer
- -Intern
+ - Engineer
+ - Intern
 
 As team must have a manager, the user has to create a Manager profile fisrt , then he can add Engineer or intenrs as many as he wish.
 User will be prompted with predefined questions, by answering them ,the apllication will capture all the information needed to build Team member profile.
