@@ -1,0 +1,133 @@
+<!doctype html>
+    <html lang="en">
+    
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+       
+    
+        <!-- Bootstrap CSS  -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- Font Awesome CSS Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+           
+    
+    
+        <title>Team Profile Generator</title>
+    </head>
+    
+    <body>
+    
+        <div class="container" id="team">
+            <div class="row">
+                <div class="col-12 text-center bg-info my-5 py-5 display-4 text-white">My Team Profile </div>
+            </div>
+            <div class="row" id="cards">
+                
+    
+            </div>
+    
+    
+        </div>
+    
+        <!-- jQuery JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+        
+                            <script>
+                            var col = $('<div class="col-4">')
+                            var card = $('<div class="card mx-auto border-info mb-3" style="max-width: 18rem;">');
+                            var header1 = $('<div class="card-header bg-primary text-white h4">');
+                            header1.text("Adam");
+                            var header2 = $('<a class="card-header text-white  bg-primary">');
+                            var icon = $('<i class="fas fa-mug-hot">');
+                            header2.text(" Manager");
+                            header2.prepend(icon);
+                            var cardBody = $('<div class="card-body text-info">');
+                            var cardTitle = $('<h5 class="card-title">');
+                            var cardText = $('<p class="list-group-item">');
+                            cardText.text("ID: M001");
+                            var cardText2 = $('<div class="list-group-item">Email : <a href="mailto:adam@gmail.com">adam@gmail.com</a></div>');
+                            var cardText3 = $('<div class="list-group-item">');
+                            cardText3.text("Office #: 001");
+                                        
+
+                            cardBody.append(cardTitle);
+                            cardBody.append(cardText);
+                            cardBody.append(cardText2);
+                            cardBody.append(cardText3);
+                    
+                            card.append(header1);
+                            card.append(header2);
+                            card.append(cardBody);
+                            col.append(card);
+                            $("#cards").append(col);    
+                            </script>        
+                            
+                    <script>
+                    var col = $('<div class="col-4">')
+                    var card = $('<div class="card mx-auto border-info mb-3" style="max-width: 18rem;">');
+                    var header1 = $('<div class="card-header bg-primary text-white h4">');
+                    header1.text("Evrard");
+                    var header2 = $('<a class="card-header text-white  bg-primary">');
+                    var icon = $('<i class="fas fa-glasses">');
+                    header2.text(" Engineer");
+                    header2.prepend(icon);
+                    var cardBody = $('<div class="card-body text-info">');
+                    var cardTitle = $('<h5 class="card-title">');
+                    var cardText = $('<p class="list-group-item">');
+                    cardText.text("ID: E001");
+                    var cardText2 = $('<div class="list-group-item">Email : <a href="mailto:evrard@gmail.com">evrard@gmail.com</a></div>');
+                    var cardText3 = $('<div class="list-group-item"> Github Username : <a href="https://github.com/Nevrard" target="_blank">Nevrard</a></div>');
+                    
+                    
+                    cardBody.append(cardTitle);
+                    cardBody.append(cardText);
+                    cardBody.append(cardText2);
+                    cardBody.append(cardText3);
+            
+                    card.append(header1);
+                    card.append(header2);
+                    card.append(cardBody);
+                    col.append(card);
+                    $("#cards").append(col);    
+                    </script>        
+                    
+                    <script>
+                    var col = $('<div class="col-4">')
+                    var card = $('<div class="card mx-auto border-info mb-3" style="max-width: 18rem;">');
+                    var header1 = $('<div class="card-header bg-primary text-white h4">');
+                    header1.text("Ndanga");
+                    var header2 = $('<a class="card-header text-white  bg-primary">');
+                    var icon = $('<i class="fas fa-graduation-cap">');
+                    header2.text(" Intern");
+                    header2.prepend(icon);
+                    var cardBody = $('<div class="card-body text-info">');
+                    var cardTitle = $('<h5 class="card-title">');
+                    var cardText = $('<p class="list-group-item">');
+                    cardText.text("ID: I001");
+                    var cardText2 = $('<div class="list-group-item">Email : <a href="mailto:ndanga@gmail.com">ndanga@gmail.com</a></div>');
+                    var cardText3 = $('<div class="list-group-item">');
+                    cardText3.text("School: Carleton");
+                                
+
+                    cardBody.append(cardTitle);
+                    cardBody.append(cardText);
+                    cardBody.append(cardText2);
+                    cardBody.append(cardText3);
+            
+                    card.append(header1);
+                    card.append(header2);
+                    card.append(cardBody);
+                    col.append(card);
+                    $("#cards").append(col);    
+                    </script>        
+                    
+            
+   
+    </body>
+    
+    </html>
